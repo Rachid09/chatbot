@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css' )
+    }}"
+    /> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script
+      src="{{ url_for('static', filename='js/index.js' ) }}"
+      defer
+      ></script> -->
+    <script src="/static/js/index.js" defer></script>
+    <script src="/static/js/pop-up.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
+    <script
+      src="https://kit.fontawesome.com/9ce5e023b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/static/css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <svg class="chatbot-logo">
+        <use href="/static/svges.svg#chatbot-logo" />
+      </svg>
+    </header>
+    <div class="background-elipse"></div>
+
+    <section class="chatbot-box">
+      <div class="chatbot-box__icon-box">
+        <svg
+          width="60"
+          height="60"
+          viewBox="0 0 90 78"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M90 42.6223C90 52.6835 86.0252 61.6735 79.7847 67.6639C83.3354 61.6445 85.4089 52.6509 85.4089 39.1622C85.4089 30.7504 82.8533 22.9276 78.4833 16.437C85.4597 22.3857 90 31.8832 90 42.6223ZM11.5167 16.4352C4.54033 22.3875 0 31.8832 0 42.6205C0 52.9137 4.16333 62.0814 10.6539 68.0662C6.8549 62.0487 4.59108 52.9499 4.59108 39.1604C4.59108 30.7467 7.14671 22.924 11.5167 16.4352ZM73.4645 13.0077C66.4066 5.23935 56.2838 0.336517 44.9973 0.336517C33.7108 0.336517 23.588 5.23935 16.5301 13.0077C10.2588 19.9116 6.39996 29.0702 6.39996 39.1586C6.40358 57.5773 10.3204 67.2488 16.7186 72.3365C17.8822 73.2627 19.1219 74.0457 20.4414 74.691C19.9285 74.2741 19.4373 73.8318 18.9661 73.3678C15.1 69.5743 12.6767 64.3307 12.6314 58.556C12.3903 52.5947 12.2779 48.5981 12.1456 43.9708C12.0767 41.5293 12.0024 38.9248 11.9009 35.7257C11.9009 23.6743 24.4471 14.6698 35.6647 14.6698H43.1431H46.8533H54.3317C67.9327 14.6698 78.0955 25.7859 78.0955 35.7837C77.9958 38.9193 77.9215 41.5203 77.8526 43.9581C77.7203 48.5891 77.6079 52.5893 77.3686 58.498C77.3215 64.3071 74.8928 69.5706 71.0176 73.3733C70.5083 73.8735 69.9718 74.343 69.4154 74.7906C70.8672 74.0947 72.232 73.2482 73.4971 72.2151C79.7684 67.0929 83.5946 57.425 83.5946 39.1604C83.5946 29.072 79.7358 19.9098 73.4645 13.0077ZM66.3015 74.778C63.338 76.5977 59.8635 77.6635 56.1388 77.6635C53.1699 77.6635 50.694 77.6635 48.383 77.6635C43.7612 77.6635 39.8008 77.6635 33.8612 77.6635C30.1365 77.6635 26.6602 76.5977 23.6967 74.778C18.203 71.4049 14.4982 65.3982 14.442 58.4835C14.0741 49.3648 14.0034 44.7774 13.7152 35.7257C13.7152 25.0972 25.0398 16.4823 35.6665 16.4823C39.1809 16.4823 41.8671 16.4823 44.5061 16.4823C44.8342 16.4823 45.1658 16.4823 45.4939 16.4823C48.1329 16.4823 50.8172 16.4823 54.3335 16.4823C64.962 16.4823 76.2848 25.0972 76.2848 35.7257C75.9966 44.7774 75.9241 49.3648 75.5561 58.4835C75.5 65.3982 71.7952 71.4049 66.3015 74.778ZM36.7558 44.5236C36.7558 41.9208 35.3729 39.6552 33.3121 38.3774C32.2028 37.6886 30.9069 37.2736 29.5058 37.2736C25.502 37.2736 22.2558 40.5198 22.2558 44.5236C22.2558 48.5274 25.502 51.7736 29.5058 51.7736C31.1497 51.7736 32.6487 51.2045 33.8649 50.2819C35.6103 48.9588 36.7558 46.8835 36.7558 44.5236ZM67.7424 44.5236C67.7424 40.5198 64.4962 37.2736 60.4924 37.2736C59.0913 37.2736 57.7954 37.6886 56.6861 38.3774C54.6253 39.6552 53.2424 41.9208 53.2424 44.5236C53.2424 46.8817 54.3879 48.9588 56.1333 50.2819C57.3495 51.2045 58.8485 51.7736 60.4924 51.7736C64.4962 51.7736 67.7424 48.5274 67.7424 44.5236Z"
+            fill="url(#paint0_linear)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear"
+              x1="45"
+              y1="0.336517"
+              x2="45"
+              y2="77.6635"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#0552B5" />
+              <stop offset="1" stop-color="#2186EB" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="chatbot-box__messanger">
+        <div class="chatbot-box--body">
+          <ul class="messages-holder">
+            <li class="bot-message first"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="chatbot-box--bottom-bar">
+        <input
+          type="text"
+          class="chatbot-box--user-text"
+          id="user-input"
+          placeholder="اطرح سؤال"
+        />
+        <div class="submit-btn">
+          <i class="send-icon fas fa-paper-plane"></i>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
